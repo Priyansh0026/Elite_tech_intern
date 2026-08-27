@@ -1,10 +1,10 @@
-// Theme Toggle & Interactive Dashboard Controls - Priyansh Jain
+// Theme Toggle & Interactive Controls - Priyansh Jain (Juan James Theme)
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Theme Toggle (Light / Dark Figma Theme)
+    // 1. Theme Toggle (Dark / Light Theme)
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
@@ -27,23 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 2. Highlight Active Nav Icon on Scroll
+    // 2. Active Nav Link on Scroll
     const sections = document.querySelectorAll('section[id]');
-    const navBtns = document.querySelectorAll('.floating-icon-navbar .icon-nav-btn[href]');
+    const navLinks = document.querySelectorAll('.nav-links a[href]');
 
     window.addEventListener('scroll', () => {
-        let currentSection = '';
+        let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 150;
             if (window.scrollY >= sectionTop) {
-                currentSection = section.getAttribute('id');
+                current = section.getAttribute('id');
             }
         });
 
-        navBtns.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('href') === `#${currentSection}`) {
-                btn.classList.add('active');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
             }
         });
     });
@@ -55,15 +55,14 @@ window.handleContactSubmit = function (e) {
 
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('btn-submit-message');
-    const toast = document.getElementById('toast-notification');
 
     if (!contactForm) return false;
 
-    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>';
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message &rarr;';
 
     if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> SENDING...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
     }
 
     const formData = new FormData(contactForm);

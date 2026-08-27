@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,380 +7,250 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome Icons & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Main Dashboard Container -->
-    <div class="dashboard-container">
-
-        <!-- LEFT FIXED SIDEBAR (Profile Card & Skills Sidebar) -->
-        <aside class="profile-sidebar">
-            <!-- Profile Avatar & Details -->
-            <div class="sidebar-header">
-                <div class="profile-avatar-circle">
-                    <img src="avatar.jpg" alt="Priyansh Jain Profile Photo" class="profile-img">
-                </div>
-                <h2 class="profile-name">Priyansh Jain</h2>
-                <p class="profile-role">Data Analyst & ML Enthusiast</p>
-
-                <!-- Social Icons Row -->
-                <div class="sidebar-socials">
-                    <a href="https://github.com/Priyansh0026" target="_blank" title="GitHub" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/priyansh-jain-3a3665248" target="_blank" title="LinkedIn" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="mailto:tjain0911@gmail.com" title="Email" class="social-icon-btn"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="tel:+919235596602" title="Phone" class="social-icon-btn"><i class="fa-solid fa-phone"></i></a>
-                </div>
-            </div>
-
-            <hr class="sidebar-divider">
-
-            <!-- Personal Details Badges -->
-            <div class="sidebar-info-list">
-                <div class="info-row">
-                    <span class="info-badge">Age:</span>
-                    <span class="info-val">20</span>
-                </div>
-                <div class="info-row">
-                    <span class="info-badge">Residence:</span>
-                    <span class="info-val">India</span>
-                </div>
-                <div class="info-row">
-                    <span class="info-badge">Status:</span>
-                    <span class="info-val val-green">Available</span>
-                </div>
-                <div class="info-row">
-                    <span class="info-badge">Address:</span>
-                    <span class="info-val">Moradabad, UP</span>
-                </div>
-            </div>
-
-            <hr class="sidebar-divider">
-
-            <!-- Languages Progress Bars -->
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">Languages</h3>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>Hindi</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 100%;"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>English</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 90%;"></div></div>
-                </div>
-            </div>
-
-            <hr class="sidebar-divider">
-
-            <!-- Technical Skills Progress Bars -->
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">Skills</h3>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>Python (Pandas, NumPy)</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 95%;"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>Data Analytics & EDA</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 90%;"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>SQL & MySQL Databases</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>Data Viz & Power BI</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-info">
-                        <span>Machine Learning</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress-bar-bg"><div class="progress-fill" style="width: 80%;"></div></div>
-                </div>
-            </div>
-
-            <hr class="sidebar-divider">
-
-            <!-- Extra Skills List -->
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">Extra Skills</h3>
-                <ul class="extra-skills-list">
-                    <li><i class="fa-solid fa-clone icon-yellow"></i> Git & GitHub Version Control</li>
-                    <li><i class="fa-solid fa-clone icon-yellow"></i> Big Data Processing (PySpark)</li>
-                    <li><i class="fa-solid fa-clone icon-yellow"></i> Excel Analytics & Dashboards</li>
-                    <li><i class="fa-solid fa-clone icon-yellow"></i> Analytical & Critical Thinking</li>
-                </ul>
-            </div>
-
-            <hr class="sidebar-divider">
-
-            <!-- Download CV Button -->
-            <a href="PRIYANSH JAIN resume.pdf" target="_blank" class="btn-download-cv">
-                DOWNLOAD CV <i class="fa-solid fa-download"></i>
+    <!-- Header Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <div class="logo-icon">pj</div>
             </a>
-        </aside>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="PRIYANSH JAIN resume.pdf" target="_blank" class="btn-resume-pill">
+                    Resume <i class="fa-solid fa-download"></i>
+                </a>
+                <button id="theme-toggle" class="btn-theme-toggle" title="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-        <!-- MAIN CONTENT AREA (Figma Layout Cards) -->
-        <main class="main-content">
+    <!-- Hero Section (Juan James Style Bold Dark Hero) -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <!-- Left Text Content -->
+            <div class="hero-text">
+                <h1 class="hero-title">Priyansh Jain</h1>
+                <p class="hero-subtitle">
+                    Data Analyst & ML <br>
+                    Enthusiast Based In India.
+                </p>
+                <div class="hero-btn-group">
+                    <a href="#contact" class="btn-pill btn-white">Get in touch</a>
+                    <a href="#about" class="btn-pill btn-outline-white">Learn more</a>
+                </div>
+            </div>
 
-            <!-- HERO BANNER CARD -->
-            <section id="home" class="hero-banner-card">
-                <div class="hero-banner-text">
-                    <h1 class="hero-banner-heading">
-                        I'm Priyansh Jain <br>
-                        <span class="yellow-text">Data Analyst &</span> <br>
-                        <span class="yellow-text">ML Enthusiast</span>
-                    </h1>
-                    <p class="hero-banner-sub">
-                        Third-Year B.Tech Computer Science student specializing in Data Analytics, EDA, and statistical modeling. Turning complex datasets into actionable business intelligence using Python, SQL, and Power BI.
+            <!-- Right Visual & Floating 3D Tech Badges -->
+            <div class="hero-visual">
+                <!-- Center Avatar Frame -->
+                <div class="avatar-3d-wrapper">
+                    <img src="avatar.jpg" alt="Priyansh Jain Photo" class="avatar-3d-img">
+                </div>
+
+                <!-- Floating Glowing 3D Tech Badges -->
+                <div class="floating-badge badge-py" title="Python">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="floating-badge badge-sql" title="SQL / MySQL">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="floating-badge badge-bi" title="Power BI">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="floating-badge badge-ml" title="Machine Learning">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="floating-badge badge-spark" title="PySpark">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Marquee Strip -->
+        <div class="tech-marquee-strip">
+            <div class="marquee-track">
+                <span><i class="fa-brands fa-python"></i> PYTHON</span>
+                <span><i class="fa-solid fa-database"></i> SQL / MYSQL</span>
+                <span><i class="fa-solid fa-chart-column"></i> PANDAS & NUMPY</span>
+                <span><i class="fa-solid fa-chart-line"></i> POWER BI</span>
+                <span><i class="fa-solid fa-brain"></i> MACHINE LEARNING</span>
+                <span><i class="fa-solid fa-server"></i> PYSPARK</span>
+                <span><i class="fa-solid fa-file-excel"></i> EXCEL ANALYTICS</span>
+                <span><i class="fa-brands fa-github"></i> GIT & GITHUB</span>
+                <!-- Loop -->
+                <span><i class="fa-brands fa-python"></i> PYTHON</span>
+                <span><i class="fa-solid fa-database"></i> SQL / MYSQL</span>
+                <span><i class="fa-solid fa-chart-column"></i> PANDAS & NUMPY</span>
+                <span><i class="fa-solid fa-chart-line"></i> POWER BI</span>
+                <span><i class="fa-solid fa-brain"></i> MACHINE LEARNING</span>
+                <span><i class="fa-solid fa-server"></i> PYSPARK</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span class="accent-text">Me</span></h2>
+            <p class="section-sub">Turning raw complex data into strategic business intelligence.</p>
+
+            <div class="about-grid">
+                <!-- Bio Card -->
+                <div class="dark-card bio-card">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm <strong>Priyansh Jain</strong>, a Third-Year B.Tech Computer Science Engineering student (2026) at Teerthanker Mahaveer University, Moradabad.
                     </p>
-                    <a href="#contact" class="btn-yellow-hire">
-                        HIRE ME <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="hero-banner-photo-wrapper">
-                    <div class="hero-photo-frame">
-                        <img src="avatar.jpg" alt="Priyansh Jain Photo" class="hero-portrait-img">
-                    </div>
-                    <div class="floating-shape shape-1"></div>
-                    <div class="floating-shape shape-2"></div>
-                </div>
-            </section>
-
-            <!-- MY SERVICES / EXPERTISE SECTION -->
-            <section id="services" class="content-section">
-                <h2 class="content-section-title">My Services</h2>
-                <p class="content-section-sub">Delivering end-to-end data analytics, machine learning solutions, and business intelligence.</p>
-
-                <div class="services-grid">
-                    <!-- Service 1 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-chart-column"></i></div>
-                        <h3>Data Analytics & EDA</h3>
-                        <p>Exploratory data analysis, raw dataset preprocessing, outlier cleaning, and correlation insights.</p>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
-                        <h3>Machine Learning</h3>
-                        <p>Building predictive churn models, classification workflows, Scikit-Learn algorithms, and evaluation metrics.</p>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                        <h3>Data Visualization</h3>
-                        <p>Designing interactive executive dashboards using Power BI, Excel, Plotly, Dash, and Seaborn.</p>
-                    </div>
-
-                    <!-- Service 4 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-server"></i></div>
-                        <h3>Big Data Processing</h3>
-                        <p>Handling large-scale high-volume transaction datasets using PySpark and optimized data pipelines.</p>
-                    </div>
-
-                    <!-- Service 5 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
-                        <h3>Database Querying</h3>
-                        <p>Writing and optimizing complex MySQL database queries to extract, filter, and aggregate business metrics.</p>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
-                        <h3>Business Insights</h3>
-                        <p>Translating complex analytical findings into data-backed strategic recommendations for stakeholders.</p>
+                    <p>
+                        Specializing in <strong>Data Analytics, Exploratory Data Analysis (EDA), and Machine Learning</strong>, I enjoy processing large datasets, finding hidden patterns, and building executive dashboards.
+                    </p>
+                    <div class="about-quick-stats">
+                        <div class="stat-box">
+                            <h4>2+</h4>
+                            <span>Internships</span>
+                        </div>
+                        <div class="stat-box">
+                            <h4>5+</h4>
+                            <span>Analytics Projects</span>
+                        </div>
+                        <div class="stat-box">
+                            <h4>95%</h4>
+                            <span>Python Proficiency</span>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- INTERNSHIPS & EDUCATION SECTION -->
-            <section id="internships" class="content-section">
-                <h2 class="content-section-title">Internships & Education</h2>
+                <!-- Cards Stack -->
+                <div class="about-stack">
+                    <!-- Education Card -->
+                    <div class="dark-card mini-card">
+                        <div class="card-head"><i class="fa-solid fa-graduation-cap icon-glow"></i> <h3>Education</h3></div>
+                        <h4>B.Tech in Computer Science Engineering</h4>
+                        <p class="card-sub">Teerthanker Mahaveer University (2024–2028)</p>
+                    </div>
 
-                <div class="timeline-grid">
-                    <!-- Sabudh Foundation -->
-                    <div class="timeline-card">
-                        <span class="timeline-date">04/07/2026 – 17/08/2026</span>
-                        <h3>Data Analytics Intern</h3>
-                        <p class="timeline-company">Sabudh Foundation (in Collaboration with STPI) | Mohali, Punjab</p>
-                        <ul class="timeline-bullets">
-                            <li>Cleaned raw datasets using Python (Pandas, NumPy) and resolved missing variables.</li>
-                            <li>Conducted EDA on client datasets and built Power BI & Excel dashboards.</li>
-                            <li>Formulated MySQL queries to filter data efficiently and reduce report cycles.</li>
+                    <!-- Goal Card -->
+                    <div class="dark-card mini-card">
+                        <div class="card-head"><i class="fa-solid fa-bullseye icon-glow"></i> <h3>My Goal</h3></div>
+                        <ul class="bullet-list">
+                            <li>• Build scalable Machine Learning & Data Analytics solutions</li>
+                            <li>• Master Big Data pipelines & predictive modeling</li>
+                            <li>• Deliver data-driven business decisions using Power BI</li>
                         </ul>
                     </div>
-
-                    <!-- Elite Tech -->
-                    <div class="timeline-card">
-                        <span class="timeline-date">01/06/2026 – 03/07/2026</span>
-                        <h3>Data Science Intern</h3>
-                        <p class="timeline-company">Elite Tech | Remote</p>
-                        <ul class="timeline-bullets">
-                            <li>Evaluated Predictive Churn ML models (Logistic Regression, Random Forest).</li>
-                            <li>Built executive sales dashboard using Dash & Plotly and NLP Sentiment Analyzer.</li>
-                            <li>Processed high-volume datasets utilizing PySpark for sales KPI extraction.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Education -->
-                    <div class="timeline-card">
-                        <span class="timeline-date">2024 – 2028</span>
-                        <h3>B.Tech - Computer Science Engineering</h3>
-                        <p class="timeline-company">Teerthanker Mahaveer University, Moradabad</p>
-                        <p class="timeline-bullets">Specialization in Data Science & Analytics, DBMS, Data Structures, and Machine Learning.</p>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <!-- FEATURED PROJECTS SECTION -->
-            <section id="projects" class="content-section">
-                <h2 class="content-section-title">Featured Projects</h2>
+    <!-- Work Section (Internships & Projects) -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title">Work & <span class="accent-text">Projects</span></h2>
+            <p class="section-sub">Professional internship experience and key analytics dashboards.</p>
 
-                <div class="projects-grid">
-                    <!-- Project 1: IPL Capstone -->
-                    <div class="project-card-figma">
-                        <span class="project-tag-yellow">Cricket Analytics</span>
-                        <h3>IPL Capstone Analysis</h3>
-                        <p class="project-tech-text">Python | Pandas | NumPy | Matplotlib | Seaborn</p>
-                        <p class="project-body-text">Comprehensive data cleaning on IPL 2022 match dataset, analyzing toss impact, field decision trends, and player awards.</p>
-                        <a href="https://github.com/Priyansh0026" target="_blank" class="project-link-btn">
-                            View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 2: Zomato Analysis -->
-                    <div class="project-card-figma">
-                        <span class="project-tag-yellow">Dining Analytics</span>
-                        <h3>Zomato Restaurant Analysis</h3>
-                        <p class="project-tech-text">Python | Pandas | Matplotlib | Seaborn</p>
-                        <p class="project-body-text">Analyzed dining restaurant engagement, cost for two distributions, offline vs. online ordering heatmaps, and rating distributions.</p>
-                        <a href="https://github.com/Priyansh0026" target="_blank" class="project-link-btn">
-                            View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
-                    <!-- Project 3: NYC Taxi Dashboard -->
-                    <div class="project-card-figma">
-                        <span class="project-tag-yellow">Geospatial Analytics</span>
-                        <h3>NYC Taxi Fare Dashboard</h3>
-                        <p class="project-tech-text">Python | Pandas | Folium | Plotly</p>
-                        <p class="project-body-text">Urban taxi trip analysis, peak pickup hour calculations, fare density heatmaps, and GPS trip outlier cleaning.</p>
-                        <a href="https://github.com/Priyansh0026" target="_blank" class="project-link-btn">
-                            View Code <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
+            <!-- Internships Grid -->
+            <div class="work-grid">
+                <!-- Sabudh Foundation -->
+                <div class="dark-card work-card">
+                    <span class="card-tag">04/07/2026 – 17/08/2026</span>
+                    <h3>Data Analytics Intern</h3>
+                    <p class="company-name">Sabudh Foundation (STPI Collaboration) | Mohali</p>
+                    <ul class="bullet-list">
+                        <li>Cleaned and preprocessed client datasets using Pandas & NumPy.</li>
+                        <li>Conducted EDA to extract key performance indicators (KPIs).</li>
+                        <li>Built interactive dashboards in Power BI & Excel and optimized MySQL queries.</li>
+                    </ul>
                 </div>
-            </section>
 
-            <!-- CERTIFICATIONS SECTION -->
-            <section id="certifications" class="content-section">
-                <h2 class="content-section-title">Certifications</h2>
-                <div class="cert-flex-grid">
-                    <div class="cert-card-figma">
-                        <i class="fa-solid fa-certificate cert-icon-yellow"></i>
-                        <div>
-                            <h4>Deloitte Data Analytics Job Simulation</h4>
-                            <p>Issued by Forage (June 2026)</p>
-                        </div>
-                    </div>
-                    <div class="cert-card-figma">
-                        <i class="fa-solid fa-certificate cert-icon-yellow"></i>
-                        <div>
-                            <h4>Explore AI Basics</h4>
-                            <p>Issued by Microsoft Learn (May 2026)</p>
-                        </div>
-                    </div>
-                    <div class="cert-card-figma">
-                        <i class="fa-solid fa-certificate cert-icon-yellow"></i>
-                        <div>
-                            <h4>Explore Generative AI</h4>
-                            <p>Issued by Microsoft Learn (May 2026)</p>
-                        </div>
-                    </div>
+                <!-- Elite Tech -->
+                <div class="dark-card work-card">
+                    <span class="card-tag">01/06/2026 – 03/07/2026</span>
+                    <h3>Data Science Intern</h3>
+                    <p class="company-name">Elite Tech | Remote</p>
+                    <ul class="bullet-list">
+                        <li>Built Predictive Churn ML models (Logistic Regression & Random Forest).</li>
+                        <li>Developed Dash/Plotly sales dashboards and NLP Sentiment Analyzers.</li>
+                        <li>Processed high-volume datasets utilizing PySpark (Big Data Engine).</li>
+                    </ul>
                 </div>
-            </section>
+            </div>
 
-            <!-- CONTACT FORM SECTION (Web3Forms API Integrated) -->
-            <section id="contact" class="content-section">
-                <h2 class="content-section-title">Leave Us Your Information</h2>
-
-                <div class="contact-card-figma">
-                    <form id="contact-form" onsubmit="return handleContactSubmit(event);">
-                        <input type="hidden" name="access_key" value="77bdccd4-e741-47fa-9935-dd89b481e4ae">
-                        
-                        <div class="form-row-grid">
-                            <div class="form-group">
-                                <label>Your Full Name (Required)</label>
-                                <input type="text" name="name" placeholder="Your Name" required class="input-figma">
-                            </div>
-                            <div class="form-group">
-                                <label>Your Email (Required)</label>
-                                <input type="email" name="email" placeholder="tjain0911@gmail.com" required class="input-figma">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Subject</label>
-                            <input type="text" name="subject" placeholder="Project Inquiry / Job Opportunity" required class="input-figma">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Your Message</label>
-                            <textarea name="message" rows="5" placeholder="Write your message here..." required class="input-figma textarea-figma"></textarea>
-                        </div>
-
-                        <button type="submit" id="btn-submit-message" class="btn-yellow-submit">
-                            SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="dark-card project-card">
+                    <span class="project-tag">Cricket Analytics</span>
+                    <h3>IPL Capstone Analysis</h3>
+                    <p class="project-tech">Python | Pandas | NumPy | Seaborn</p>
+                    <p class="project-desc">Cleaned IPL match data, evaluated toss win impact, field decision trends, and player stats.</p>
+                    <a href="https://github.com/Priyansh0026" target="_blank" class="card-link">View Repo &rarr;</a>
                 </div>
-            </section>
 
-            <!-- Footer -->
-            <footer class="footer-figma">
-                <p>&copy; 2026 Priyansh Jain. All rights reserved.</p>
-            </footer>
-        </main>
+                <!-- Project 2 -->
+                <div class="dark-card project-card">
+                    <span class="project-tag">Dining Analytics</span>
+                    <h3>Zomato Restaurant Analysis</h3>
+                    <p class="project-tech">Python | Pandas | Seaborn</p>
+                    <p class="project-desc">Analyzed customer dining trends, couple spending distributions, and rating boxplots.</p>
+                    <a href="https://github.com/Priyansh0026" target="_blank" class="card-link">View Repo &rarr;</a>
+                </div>
 
-        <!-- RIGHT FLOATING NAVBAR (Icon Toolbar) -->
-        <nav class="floating-icon-navbar">
-            <button id="theme-toggle" class="icon-nav-btn" title="Toggle Theme">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-            <a href="#home" class="icon-nav-btn active" title="Home"><i class="fa-solid fa-house"></i></a>
-            <a href="#services" class="icon-nav-btn" title="Services"><i class="fa-solid fa-code"></i></a>
-            <a href="#internships" class="icon-nav-btn" title="Experience"><i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="#projects" class="icon-nav-btn" title="Projects"><i class="fa-solid fa-folder-open"></i></a>
-            <a href="#contact" class="icon-nav-btn" title="Contact"><i class="fa-solid fa-envelope"></i></a>
-        </nav>
+                <!-- Project 3 -->
+                <div class="dark-card project-card">
+                    <span class="project-tag">Geospatial Analytics</span>
+                    <h3>NYC Taxi Fare Dashboard</h3>
+                    <p class="project-tech">Python | Pandas | Folium | Plotly</p>
+                    <p class="project-desc">Urban trip analysis, pickup peak hours, fare density heatmaps, and GPS outlier cleaning.</p>
+                    <a href="https://github.com/Priyansh0026" target="_blank" class="card-link">View Repo &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="dark-card contact-card-wrapper">
+                <h2 class="section-title">Let's Work <span class="accent-text">Together</span></h2>
+                <p class="section-sub">Have a project in mind or want to collaborate?</p>
 
-    <!-- Toast Notification (Green Check Toast Alert) -->
+                <form id="contact-form" onsubmit="return handleContactSubmit(event);">
+                    <input type="hidden" name="access_key" value="77bdccd4-e741-47fa-9935-dd89b481e4ae">
+                    
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required class="dark-input">
+                        <input type="email" name="email" placeholder="Your Email (tjain0911@gmail.com)" required class="dark-input">
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required class="dark-input">
+                    <textarea name="message" rows="5" placeholder="Your Message..." required class="dark-input dark-textarea"></textarea>
+
+                    <button type="submit" id="btn-submit-message" class="btn-pill btn-white btn-submit">
+                        Send Message &rarr;
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Priyansh Jain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
     <div id="toast-notification" class="toast-notification">
         <i class="fa-solid fa-circle-check toast-icon"></i>
         <span>Message Sent Successfully!</span>
