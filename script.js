@@ -1,22 +1,25 @@
-// Theme Toggle & Interactive Controls - Priyansh Jain
+// Theme Toggle & Interactive Dashboard Controls - Priyansh Jain
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Theme Toggle
+    // 1. Theme Toggle (Light / Dark Figma Theme)
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
 
     function updateThemeIcon(theme) {
+        if (!themeIcon) return;
         if (theme === 'dark') {
             themeIcon.className = 'fa-solid fa-sun';
         } else {
@@ -24,73 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 2. Typing Effect for Hero Subtitle
-    const typedTextSpan = document.getElementById('typed-text');
-    const roles = [
-        "Data Analyst & ML Enthusiast",
-        "Sabudh Data Analytics Intern",
-        "Elite Tech Data Science Intern",
-        "Blinkit & Zomato Analytics",
-        "IPL Capstone & Big Data Analyst"
-    ];
+    // 2. Highlight Active Nav Icon on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navBtns = document.querySelectorAll('.floating-icon-navbar .icon-nav-btn[href]');
 
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingDelay = 100;
-    let erasingDelay = 50;
-    let newRoleDelay = 2000;
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            if (window.scrollY >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
 
-    function type() {
-        if (!typedTextSpan) return;
-
-        const currentRole = roles[roleIndex];
-
-        if (isDeleting) {
-            typedTextSpan.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-            typingDelay = erasingDelay;
-        } else {
-            typedTextSpan.textContent = currentRole.substring(0, charIndex + 1);
-            charIndex++;
-            typingDelay = 100;
-        }
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            typingDelay = newRoleDelay;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            typingDelay = 500;
-        }
-
-        setTimeout(type, typingDelay);
-    }
-
-    if (roles.length) setTimeout(type, 500);
-
-    // 3. Restore User's Saved Avatar & Position from localStorage (if any)
-    const portfolioAvatar = document.querySelector('.avatar-img');
-    if (portfolioAvatar) {
-        const customSrc = localStorage.getItem('customAvatarSrc');
-        const zoom = localStorage.getItem('avatarZoom');
-        const posX = localStorage.getItem('avatarPosX');
-        const posY = localStorage.getItem('avatarPosY');
-
-        if (customSrc) {
-            portfolioAvatar.src = customSrc;
-        }
-        if (zoom !== null || posX !== null || posY !== null) {
-            const z = zoom || 1;
-            const x = posX || 0;
-            const y = posY || 0;
-            portfolioAvatar.style.transform = `translate(${x}px, ${y}px) scale(${z})`;
-        }
-    }
+        navBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('href') === `#${currentSection}`) {
+                btn.classList.add('active');
+            }
+        });
+    });
 });
 
-// Global Contact Form Handler (Completely Prevents Outlook / Mailto Opening)
+// Global Contact Form Handler (Web3Forms API + Toast Notification)
 window.handleContactSubmit = function (e) {
     if (e) e.preventDefault();
 
@@ -100,11 +59,11 @@ window.handleContactSubmit = function (e) {
 
     if (!contactForm) return false;
 
-    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message &rarr;';
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>';
 
     if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> SENDING...';
     }
 
     const formData = new FormData(contactForm);
