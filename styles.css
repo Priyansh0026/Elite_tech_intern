@@ -145,11 +145,11 @@ body {
 }
 
 /* =========================================================
-   2. HERO SECTION (JUAN JAMES BOLD DARK HERO)
+   2. HERO SECTION
    ========================================================= */
 .hero-section {
     padding-top: 10rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     position: relative;
     overflow: hidden;
 }
@@ -178,7 +178,41 @@ body {
     font-weight: 700;
     line-height: 1.25;
     color: #CBD5E1;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Social Buttons Row */
+.hero-social-links,
+.contact-social-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.contact-social-row {
+    justify-content: center;
+}
+
+.social-circle-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--card-border);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social-circle-btn:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--glow-blue);
 }
 
 .hero-btn-group {
@@ -309,43 +343,11 @@ body {
     animation-delay: 2.5s;
 }
 
-/* MARQUEE STRIP */
-.tech-marquee-strip {
-    margin-top: 5rem;
-    padding: 1.2rem 0;
-    background: rgba(255, 255, 255, 0.03);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.marquee-track {
-    display: inline-flex;
-    gap: 3rem;
-    animation: marqueeScroll 25s linear infinite;
-}
-
-@keyframes marqueeScroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-
-.marquee-track span {
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #64748B;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
 /* =========================================================
-   3. SECTIONS COMMON
+   3. SECTIONS COMMON & CARDS
    ========================================================= */
 .section {
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 .section-title {
@@ -361,7 +363,7 @@ body {
 .section-sub {
     font-size: 1rem;
     color: var(--text-muted);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 /* DARK CARDS */
@@ -449,6 +451,61 @@ body {
     font-size: 0.92rem;
 }
 
+/* DEDICATED SKILLS SECTION */
+.skills-container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-group-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.skill-group-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-group-head h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.skill-pills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    color: #E2E8F0;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.skill-badge i {
+    color: var(--accent-cyan);
+}
+
+.skill-badge:hover {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: var(--accent-blue);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
 /* WORK SECTION */
 .work-grid {
     display: grid;
@@ -527,7 +584,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .form-row {
@@ -608,7 +665,7 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-    .hero-container, .about-grid, .work-grid {
+    .hero-container, .about-grid, .work-grid, .skills-container-grid {
         grid-template-columns: 1fr;
     }
     .hero-title {
