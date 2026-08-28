@@ -1,0 +1,3 @@
+# Ignore generated PDF resume from git tracking
+PRIYANSH JAIN resume.pdf
+*.pdf
