@@ -55,7 +55,8 @@ python build_resume_pdf.py
 
 ---
 
-## 🌐 GitHub & Deployment
+## 🌐 GitHub & Live Deployment
 
+* **Live Vercel Portfolio:** [priyansh-jain-portfolio.vercel.app](https://priyansh-jain-portfolio.vercel.app)
 * **GitHub Repository:** [github.com/Priyansh0026/Elite_tech_intern/tree/portfolio-website](https://github.com/Priyansh0026/Elite_tech_intern/tree/portfolio-website)
 * **Render Live Deployment:** Blueprint `render.yaml` configured for instant free hosting at [dashboard.render.com](https://dashboard.render.com).

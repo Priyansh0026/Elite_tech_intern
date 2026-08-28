@@ -96,7 +96,7 @@ story.append(Paragraph(line1_text, contact_style_line1))
 line2_text = (
     '<a href="https://www.linkedin.com/in/priyansh-jain-3a3665248" color="#111111"><u>LinkedIn</u></a> &nbsp;|&nbsp; '
     '<a href="https://github.com/Priyansh0026" color="#111111"><u>GitHub</u></a> &nbsp;|&nbsp; '
-    '<a href="https://priyansh-jain.netlify.app" color="#111111"><u>Portfolio</u></a>'
+    '<a href="https://priyansh-jain-portfolio.vercel.app" color="#111111"><u>Portfolio</u></a>'
 )
 story.append(Paragraph(line2_text, contact_style_line2))
 
