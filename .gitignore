@@ -1,3 +1,2 @@
-# Ignore generated PDF resume from git tracking
-PRIYANSH JAIN resume.pdf
-*.pdf
+# Git ignore file
+!priyansh-jain-resume.pdf

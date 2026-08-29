@@ -210,4 +210,9 @@ for c in certs:
     story.append(Paragraph(c, bullet_style))
 
 doc.build(story)
-print("Updated 2-Line Header Resume Generated!")
+
+import shutil
+clean_pdf_path = r"C:\Users\tanuj\OneDrive\Desktop\portfolio\priyansh-jain-resume.pdf"
+shutil.copyfile(pdf_path, clean_pdf_path)
+
+print("Updated 2-Line Header Resume Generated (both versions created)!")
